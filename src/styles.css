@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+html, body {
+	background-image: linear-gradient(to right, rgb(63, 191, 191, 0.4), rgb(25, 76, 76, 0.4)),url('http://www.westhawaiitoday.com/wp-content/uploads/2018/09/IMG-5338-1.jpg');
+	background-repeat: none;
+	background-size: cover;
+	background-color: #1C1E23;
+	color: #FFF;
+}
+
+.cntr {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.5%;
+	margin-top: 5%;
+	border: solid 1px #4F5257;
+	border-radius: 5px;
+	background-color: #313337;
+}

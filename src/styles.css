@@ -15,7 +15,7 @@ html, body {
 	padding: 0.5%;
 	border: solid 1px #4F5257;
 	border-radius: 5px;
-	background-color: #313337;
+	background-color: rgba(49,51,55,0.9);
 }
 
 input{
@@ -29,7 +29,7 @@ input{
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .55;
+    opacity: .75;
     overflow: hidden;
 }
 

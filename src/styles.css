@@ -18,10 +18,6 @@ html, body {
 	background-color: rgba(49,51,55,0.9);
 }
 
-input{
-   text-align:center;
-}
-
 .bg-video {
     position: absolute;
     top: 0;

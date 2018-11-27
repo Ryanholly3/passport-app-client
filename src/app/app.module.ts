@@ -7,17 +7,21 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginSignupComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'signup-form', component: SignupFormComponent }
 ];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginSignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
@@ -28,4 +32,5 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

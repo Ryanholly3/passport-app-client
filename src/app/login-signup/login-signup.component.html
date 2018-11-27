@@ -1,16 +1,16 @@
-<div class="col-lg-3 cntr">
-	<button type="button" class="btn btn-primary lgin">Log In</button>
-	<button type="button" class="btn btn-primary">Sign Up</button>
+<div class="col-lg-4 cntr">
+	<a routerLink=""><button type="button" class="btn btn-primary lgin">Log In</button></a>
+	<a routerLink="/signup-form"><button type="button" class="btn btn-primary">Sign Up</button></a>
 	<hr>
-	<h4>Username</h4>
+	<h4>Login</h4>
 	<form>
 	  <div class="form-group">
-	    <label for="exampleInputEmail1">Email address</label>
-	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+	    <label for="inputEmail">Email address</label>
+	    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
 	  </div>
 	  <div class="form-group">
-	    <label for="exampleInputPassword1">Password</label>
-	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	    <label for="inputPassword">Password</label>
+	    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
 	  </div>
 	  <a routerLink="/dashboard"><button type="submit" class="btn btn-primary">Submit</button></a>
 	</form>

@@ -1,19 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 html, body {
-	background-image: linear-gradient(to right, rgb(63, 191, 191, 0.4), rgb(25, 76, 76, 0.4)),url('http://www.westhawaiitoday.com/wp-content/uploads/2018/09/IMG-5338-1.jpg');
-	background-repeat: none;
-	background-size: cover;
-	background-color: #1C1E23;
+	/*background-image: linear-gradient(to right, rgb(63, 191, 191, 0.4), rgb(25, 76, 76, 0.4)),url('assets/img/hawaii-bg.jpg');*/
+	/*background-repeat: none;*/
+	/*background-size: cover;*/
+	/*background-color: rgba(28,30,35,0.9);*/
 	color: #FFF;
 }
 
 .cntr {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10%;
 	padding: 0.5%;
-	margin-top: 5%;
 	border: solid 1px #4F5257;
 	border-radius: 5px;
-	background-color: #313337;
+	background-color: rgba(49,51,55,0.9);
+}
+
+input{
+   text-align:center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .75;
+    overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

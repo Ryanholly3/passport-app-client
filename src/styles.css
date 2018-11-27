@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 html, body {
-	background-image: linear-gradient(to right, rgb(63, 191, 191, 0.4), rgb(25, 76, 76, 0.4)),url('hawaii-bg.jpg');
-	background-repeat: none;
-	background-size: cover;
-	background-color: #1C1E23;
+	/*background-image: linear-gradient(to right, rgb(63, 191, 191, 0.4), rgb(25, 76, 76, 0.4)),url('assets/img/hawaii-bg.jpg');*/
+	/*background-repeat: none;*/
+	/*background-size: cover;*/
+	/*background-color: rgba(28,30,35,0.9);*/
 	color: #FFF;
 }
 
@@ -20,4 +20,21 @@ html, body {
 
 input{
    text-align:center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .55;
+    overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

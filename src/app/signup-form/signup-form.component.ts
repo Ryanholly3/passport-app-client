@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import countries from '../countries.json';
 
 @Component({
   selector: 'app-signup-form',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent implements OnInit {
+	cntries = countries
 
   constructor() { }
 
   ngOnInit() {
   }
+
+
+
 
 }

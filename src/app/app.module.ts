@@ -11,9 +11,10 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginSignupComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'signup-form', component: SignupFormComponent }
 ];
+
 
 @NgModule({
   declarations: [
@@ -31,4 +32,5 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

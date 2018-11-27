@@ -4,15 +4,51 @@
 	<hr>
 	<h4>Signup</h4>
 	<form>
-	  <div class="form-group">
-	    <label for="inputEmail">Email address</label>
-	    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-	  </div>
-	  <div class="form-group">
-	    <label for="inputPassword">Password</label>
-	    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-	  </div>
-	  <a routerLink="/dashboard"><button type="submit" class="btn btn-primary">Submit</button></a>
+
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Full Name</span>
+		  </div>
+		  <input type="text" class="form-control" placeholder="Enter Full Name" aria-label="Username" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Email</span>
+		  </div>
+		  <input type="email" class="form-control" placeholder="Enter Email" aria-label="Email" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Age</span>
+		  </div>
+		  <input type="text" class="form-control" placeholder="Enter Age" aria-label="Age" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Gender</span>
+		  </div>
+		  <input type="text" class="form-control" placeholder="Enter Gender" aria-label="Gender" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <label class="input-group-text" for="homeInput">Home Country</label>
+		  </div>
+		  <select class="custom-select" id="homeInput">
+		    <option selected>Select...</option>
+		    <option value="1">One</option>
+		    <option value="2">Two</option>
+		    <option value="3">Three</option>
+		  </select>
+		</div>
+		<div class="input-group">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text">Bio</span>
+		  </div>
+		  <textarea class="form-control" aria-label="Bio" maxlength="322"></textarea>
+		</div>
+
+
+	  <a routerLink="/dashboard"><button type="submit" class="btn btn-primary sub">Submit</button></a>
 	</form>
 </div>
 

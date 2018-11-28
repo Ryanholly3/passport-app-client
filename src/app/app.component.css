@@ -1,16 +1,12 @@
-.bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: .15;
-    overflow: hidden;
+.lgout {
+	border-bottom: 1px solid rgba(255,255,255,0);
+	transition: all 0.5s;
 }
 
-.bg-video__content {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.lgout:hover {
+	color: red !important;
+	border-bottom: 1px solid rgba(255,255,255,1);
+	border-radius: 4px;
 }
+
+

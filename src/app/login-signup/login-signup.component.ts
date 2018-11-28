@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-login-signup',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginSignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private comp: AppComponent) { }
 
   ngOnInit() {
+  }
+
+  public enableNav(): void {
+  	this.comp.enableNav();
+  }
+
+  public logOut(): void {
+  	this.comp.logOut();
   }
 
 }

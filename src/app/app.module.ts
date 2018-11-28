@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginSignupComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'signup-form', component: SignupFormComponent }
+  { path: 'signup-form', component: SignupFormComponent },
+  { path: 'profile', component: ProfileComponent }
 ];
 
 
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginSignupComponent,
     DashboardComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

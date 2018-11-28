@@ -8,6 +8,11 @@ html, body {
 	color: #FFF;
 }
 
+hr {
+	background-color: #FFF;
+	opacity: 0.2
+}
+
 .cntr {
 	margin-left: auto;
 	margin-right: auto;

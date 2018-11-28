@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import fakeUser from '../fakeUser.json';
+
+import { UserTemplate } from '../userTemplate'
+import { UsersService } from '../users.service'
 
 @Component({
   selector: 'app-profile',
@@ -7,12 +9,21 @@ import fakeUser from '../fakeUser.json';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-	users = fakeUser
 	title = 'My Profile'
 
-  constructor() { }
+	data: UserTemplate[]
+
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
+  	this.getUsers();
+  }
+
+  getUsers(): void {
+  	this.usersService.getUsers()
+  	.subscribe(users => {
+  		this.data = users
+  	})
   }
 
 }

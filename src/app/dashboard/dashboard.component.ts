@@ -1,4 +1,3 @@
-/// <reference types="@types/googlemaps" />
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { } from '@types/googlemaps';

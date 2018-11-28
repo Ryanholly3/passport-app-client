@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   	var mapProp = {
       center: new google.maps.LatLng(39.757908, -105.006937),
-      zoom: 18,
+      zoom: 16,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);

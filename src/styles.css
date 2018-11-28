@@ -39,3 +39,7 @@ hr {
   width: 100%;
   object-fit: cover;
 }
+
+.bg-dark {
+	background-color: rgb(48,52,57, 0.9) !important;
+}

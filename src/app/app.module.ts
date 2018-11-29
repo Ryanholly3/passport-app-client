@@ -9,6 +9,7 @@ import { LoginSignupComponent } from './login-signup/login-signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AgmCoreModule } from '@agm/core';
 
 const appRoutes: Routes = [
   { path: '', component: LoginSignupComponent },
@@ -30,7 +31,10 @@ const appRoutes: Routes = [
     BrowserModule,
     // AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAkcBhW8xjUtmbw041SrpKIt3W6pC8E_X0'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { UsersService } from '../users.service'
 
+import { AppComponent } from '../app.component'
+
 
 @Component({
   selector: 'app-login-signup',
@@ -11,7 +13,7 @@ import { UsersService } from '../users.service'
 export class LoginSignupComponent implements OnInit {
   selectedUser = null;
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private comp: AppComponent) { }
 
   ngOnInit() {
     this.getAllUsers()
@@ -26,12 +28,18 @@ export class LoginSignupComponent implements OnInit {
     this.usersService.fetchDestinations()
   }
 
-
-
   //set to scroll down menu instead of submit!!
   setUser(event){
     this.selectedUser = event.target.value;
     this.usersService.fetchUser(this.selectedUser)
+  }
+
+  public navEnabled(): void {
+    this.comp.navEnabled(); 
+  }
+
+  public navDisabled(): void {
+    this.comp.navDisabled(); 
   }
 
 }

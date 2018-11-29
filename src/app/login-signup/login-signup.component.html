@@ -1,19 +1,22 @@
 <div class="col-lg-4 cntr">
-	<a routerLink=""><button type="button" class="btn btn-primary nav1 lgin">Log In</button></a>
-	<a routerLink="/signup-form"><button type="button" class="btn btn-primary nav1">Sign Up</button></a>
+	<a routerLink=""><button type="button" class="btn btn-info nav1 lgin">Log In</button></a>
+	<a routerLink="/signup-form"><button type="button" class="btn btn-info nav1">Sign Up</button></a>
 	<hr>
 	<h4>Log In</h4>
+	<hr>
 	<form>
-		<select
-			class="custom-select custom-select-md mb-3"
-			(change)="setUser($event)"
-			>
-		  <option selected>Open this select menu</option>
-		  <option value="1">Ryan</option>
-		  <option value="2">Chris</option>
-		  <option value="3">Tyler</option>
-			<option value="4">Son</option>
-		</select>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <label class="input-group-text" for="userSelect">User</label>
+		  </div>
+		  <select class="custom-select" (change)="setUser($event)" id="homeInput">
+		    <option selected>Select...</option>
+		    <option value="1">Ryan</option>
+			  <option value="2">Chris</option>
+			  <option value="3">Tyler</option>
+				<option value="4">Son</option>
+		  </select>
+		</div>
 	  <div class="input-group mb-3">
 		  <div class="input-group-prepend">
 		    <span class="input-group-text" id="basic-addon1">Email</span>
@@ -30,6 +33,7 @@
 			<button
 				type="submit"
 				class="btn btn-success nav1"
+				(click)="navEnabled()"
 			>Submit</button>
 		</a>
 	</form>

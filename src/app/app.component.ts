@@ -8,11 +8,21 @@ import { UsersService } from './users.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	showNav = false;
+	// showNav false = ENABLED
+	showNav = true;
 
   constructor(private usersService: UsersService){}
 
   logOut(){
-    this.usersService.removeUser()
+    this.usersService.removeUser();
+    this.navDisabled();
+  }
+
+  public navEnabled(){
+    this.showNav = false; 
+  }
+
+  public navDisabled(){
+    this.showNav = true; 
   }
 }

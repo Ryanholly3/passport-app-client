@@ -11,7 +11,6 @@ export class UsersService {
   user = {}
   users = {}
 
-
   constructor() { }
 
   fetchUser(selectedUser) {

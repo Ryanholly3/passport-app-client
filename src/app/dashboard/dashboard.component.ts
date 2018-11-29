@@ -16,6 +16,8 @@ export class DashboardComponent implements OnInit {
   longitude:number;
 
   user= {};
+  visits= [];
+  destinations= [;]
 
   constructor(private usersService: UsersService) { }
 
@@ -41,5 +43,8 @@ export class DashboardComponent implements OnInit {
   getUser(){
     this.user = this.usersService.getUser()
     console.log('dashboard user:', this.user)
+    this.visits = this.user.user[0].visited;
+    this.destinations = this.user.user[0].destinations;
   }
+
 }

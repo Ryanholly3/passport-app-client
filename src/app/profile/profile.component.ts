@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserTemplate } from '../userTemplate'
 import { UsersService } from '../users.service'
 
 @Component({
@@ -11,19 +10,17 @@ import { UsersService } from '../users.service'
 export class ProfileComponent implements OnInit {
 	title = 'My Profile'
 
-	data: UserTemplate[]
+	user: {};
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
-  	this.getUsers();
+    this.getUser()
   }
 
-  getUsers(): void {
-  	this.usersService.getUsers()
-  	.subscribe(users => {
-  		this.data = users
-  	})
+  getUser(){
+    this.user = this.usersService.getUser()
+    console.log('profile user', this.user)
   }
 
 }

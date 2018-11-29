@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
-import { } from '@types/googlemaps';
+// import { } from '@types/googlemaps';
+
+import { UsersService } from '../users.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +15,9 @@ export class DashboardComponent implements OnInit {
   latitude:number;
   longitude:number;
 
-  constructor() { }
+  user: {}
+
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
   	var mapProp = {
@@ -22,15 +26,20 @@ export class DashboardComponent implements OnInit {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+    this.getUser()
   }
 
   setMapType(mapTypeId: string) {
-    this.map.setMapTypeId(mapTypeId)    
+    this.map.setMapTypeId(mapTypeId)
 	}
 
 	setCenter(e:any){
     e.preventDefault();
     this.map.setCenter(new google.maps.LatLng(this.latitude, this.longitude));
   }
-}
 
+  getUser(){
+    this.user = this.usersService.getUser()
+    console.log('dashboard user:', this.user)
+  }
+}

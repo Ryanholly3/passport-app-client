@@ -8,8 +8,21 @@ import { USERDATA } from './usersData';
   providedIn: 'root'
 })
 export class UsersService {
+  user = {}
 
   constructor() { }
+
+  setUser(user){
+    this.user = user
+  }
+
+  removeUser(){
+    this.user = {}
+  }
+
+  getUser(){
+    return this.user
+  }
 
   getUsers(): Observable<UserTemplate[]> {
   	return of(USERDATA)

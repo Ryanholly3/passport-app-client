@@ -16,9 +16,11 @@
 		  </div>
 		  <input type="password" class="form-control" placeholder="Enter Password" aria-label="Password" aria-describedby="Password">
 		</div>
-	  <a routerLink="/dashboard"><button type="submit" class="btn btn-success nav1">Submit</button></a>
+	  <a routerLink="/dashboard">
+			<button
+				type="submit"
+				class="btn btn-success nav1"
+				(click)="setUser()">Submit</button>
+		</a>
 	</form>
 </div>
-
-
-

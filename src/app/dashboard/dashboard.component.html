@@ -1,47 +1,34 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8">
-			<div class="card text-white bg-dark mb-3 cntr" style="max-width: 90vw;">
+			<div class="card text-white bg-dark mb-3 cntr">
 
-			  <div>
-				  <button (click)="setMapType('terrain')" class="btn btn-info nav2">Terrain</button>
-				  <button (click)="setMapType('satellite')" class="btn btn-danger nav2">Satellite</button>
-				  <button (click)="setMapType('roadmap')" class="btn btn-warning nav2">Road Map</button>
-				</div>
-				
-			  <div #gmap style="width:100%; height:700px"></div>
+				<agm-map [latitude]="latitude" [longitude]="longitude">
+				  <agm-marker
+						*ngFor="let marker of destinations"
+						 [latitude]="marker.latitude"
+						 [longitude]="marker.longitude"
+						 ></agm-marker>
+				</agm-map>
 
 			</div>
 
 		</div>
 		<div class="col-lg-4">
 			<div class="card text-white bg-dark mb-3 cntr" style="max-width: 100vw; margin-top: 43px">
-				<h1>List</h1>
+				<h3>Places I've Been</h3>
 				<ul>
-					<li>
-						Thing
-					</li>
-					<li>
-						Thing
-					</li>
-					<li>
-						Thing
-					</li>
-					<li>
-						Thing
-					</li>
-					<li>
-						Thing
-					</li>
-					<li>
-						Thing
-					</li>
-					<li>
-						Thing
-					</li>
+					<li
+						*ngFor="let visit of visits"
+					>{{ visit.name }}</li>
+				</ul>
+				<h3>Places I want to go!</h3>
+				<ul>
+					<li
+						*ngFor="let destination of destinations"
+					>{{ destination.name }}</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
-

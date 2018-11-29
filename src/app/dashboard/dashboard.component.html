@@ -9,7 +9,19 @@
 						 [latitude]="marker.latitude"
 						 [longitude]="marker.longitude"
 						 [iconUrl]="{ url: '../assets/map-icons/red-icon.png', scaledSize: {width: 40, height: 40} }"
-						 ></agm-marker>
+					></agm-marker>
+					<agm-marker
+						*ngFor="let marker2 of visits"
+						 [latitude]="marker2.latitude"
+						 [longitude]="marker2.longitude"
+						 [iconUrl]="{ url: '../assets/map-icons/green-icon.png', scaledSize: {width: 40, height: 40} }"
+					></agm-marker>
+					<agm-marker
+						*ngFor="let marker3 of filteredDestinations"
+						 [latitude]="marker3.latitude"
+						 [longitude]="marker3.longitude"
+						 [iconUrl]="{ url: '../assets/map-icons/blue-icon.png', scaledSize: {width: 40, height: 40} }"
+					></agm-marker>
 				</agm-map>
 
 			</div>

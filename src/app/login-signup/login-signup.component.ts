@@ -15,11 +15,18 @@ export class LoginSignupComponent implements OnInit {
 
   ngOnInit() {
     this.getAllUsers()
+    this.getUsersDestinations()
   }
 
   getAllUsers() {
     this.usersService.fetchAllUsers()
   }
+
+  getUsersDestinations() {
+    this.usersService.fetchDestinations()
+  }
+
+
 
   //set to scroll down menu instead of submit!!
   setUser(event){

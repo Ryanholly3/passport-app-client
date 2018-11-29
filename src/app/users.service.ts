@@ -10,6 +10,7 @@ import { USERDATA } from './usersData';
 export class UsersService {
   user = {}
   users = {}
+  usersDestinations = []
 
   constructor() { }
 
@@ -35,6 +36,18 @@ export class UsersService {
 
   getUser(){
     return this.user
+  }
+
+  fetchDestinations(){
+    fetch(`http://localhost:3100/destinations`)
+     .then(response => response.json())
+     .then(dest => {
+       this.usersDestinations = dest.destinations
+     })
+  }
+
+  getDestinations(){
+    return this.usersDestinations
   }
 
 }

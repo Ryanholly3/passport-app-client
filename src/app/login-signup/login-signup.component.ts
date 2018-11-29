@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserTemplate } from '../userTemplate'
 import { UsersService } from '../users.service'
 
 
@@ -10,32 +9,22 @@ import { UsersService } from '../users.service'
   styleUrls: ['./login-signup.component.css']
 })
 export class LoginSignupComponent implements OnInit {
-  data: UserTemplate[]
+  selectedUser = null;
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
-    this.getUsers()
+    this.getAllUsers()
   }
 
-  getUsers(): void {
-  	this.usersService.getUsers()
-  	.subscribe(users => {
-  		this.data = users
-  	})
+  getAllUsers() {
+    this.usersService.fetchAllUsers()
   }
 
-  setUser(){
-    this.usersService.setUser({
-      id: 2,
-      name: 'Matt',
-      email: 'matt@matt.com',
-      age: 32,
-      gender: 'male',
-      homeCountry: 'denver',
-      bio: 'I love to teach coding',
-    })
-    console.log('login user:',this.usersService.user)
+  //set to scroll down menu instead of submit!!
+  setUser(event){
+    this.selectedUser = event.target.value;
+    this.usersService.fetchUser(this.selectedUser)
   }
 
 }

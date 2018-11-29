@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
-// import { } from '@types/googlemaps';
+import { } from '@types/googlemaps';
 
 import { UsersService } from '../users.service'
 
@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   latitude:number;
   longitude:number;
 
-  user: {}
+  user= {};
 
   constructor(private usersService: UsersService) { }
 

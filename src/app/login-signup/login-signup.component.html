@@ -4,6 +4,16 @@
 	<hr>
 	<h4>Log In</h4>
 	<form>
+		<select
+			class="custom-select custom-select-md mb-3"
+			(change)="setUser($event)"
+			>
+		  <option selected>Open this select menu</option>
+		  <option value="1">Ryan</option>
+		  <option value="2">Chris</option>
+		  <option value="3">Tyler</option>
+			<option value="4">Son</option>
+		</select>
 	  <div class="input-group mb-3">
 		  <div class="input-group-prepend">
 		    <span class="input-group-text" id="basic-addon1">Email</span>
@@ -20,7 +30,7 @@
 			<button
 				type="submit"
 				class="btn btn-success nav1"
-				(click)="setUser()">Submit</button>
+			>Submit</button>
 		</a>
 	</form>
 </div>

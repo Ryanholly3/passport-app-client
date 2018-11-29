@@ -1,19 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 
-import { UserTemplate } from './userTemplate';
 import { USERDATA } from './usersData';
 
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class UsersService {
   user = {}
+  users = {}
+
 
   constructor() { }
 
-  setUser(user){
-    this.user = user
+  fetchUser(selectedUser) {
+     fetch(`http://localhost:3100/passport_users/${selectedUser}`)
+      .then(response => response.json())
+      .then(json => {
+        this.user = json
+      })
+  }
+
+  fetchAllUsers() {
+    fetch(`http://localhost:3100/passport_users`)
+     .then(response => response.json())
+     .then(json => {
+       this.users = json
+     })
   }
 
   removeUser(){
@@ -24,7 +38,4 @@ export class UsersService {
     return this.user
   }
 
-  getUsers(): Observable<UserTemplate[]> {
-  	return of(USERDATA)
-  }
 }

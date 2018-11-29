@@ -10,7 +10,7 @@ import { UsersService } from '../users.service'
 export class ProfileComponent implements OnInit {
 	title = 'My Profile'
 
-	user: {};
+	user= {};
 
   constructor(private usersService: UsersService) { }
 
@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
 
   getUser(){
     this.user = this.usersService.getUser()
-    console.log('profile user', this.user)
+    console.log('profile user:', this.user)
   }
 
 }

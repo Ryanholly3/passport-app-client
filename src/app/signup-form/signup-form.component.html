@@ -1,57 +1,58 @@
-<div class="col-lg-4 cntr">
+<div class="col-lg-7 cntr">
 	<a routerLink=""><button type="button" class="btn btn-info nav1 lgin">Log In</button></a>
 	<a routerLink="/signup-form"><button type="button" class="btn btn-info nav1">Sign Up</button></a>
 	<hr>
 	<h4>Sign Up</h4>
 	<hr>
 	<form>
+		<div class="col-lg-7">
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1">Full Name</span>
+			  </div>
+			  <input type="text" class="form-control" placeholder="Enter Full Name" aria-label="Username" aria-describedby="Username">
+			</div>
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1">Email</span>
+			  </div>
+			  <input type="email" class="form-control" placeholder="Enter Email" aria-label="Email" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1">Age</span>
+			  </div>
+			  <input type="number" class="form-control" placeholder="Enter Age" aria-label="Age" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="genderSelect">Gender</label>
+			  </div>
+			  <select class="custom-select" id="genderSelect">
+			    <option selected>Select...</option>
+			    <option>Male</option>
+			    <option>Female</option>
+			    <option>Other</option>
+			  </select>
+			</div>
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text" for="homeInput">Home Country</label>
+			  </div>
+			  <select class="custom-select" id="homeInput">
+			    <option selected>Select...</option>
+			    <option *ngFor="let country of cntries.countries">{{ country }}</option>
+			  </select>
+			</div>
+			<div class="input-group">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text">Bio</span>
+			  </div>
+			  <textarea class="form-control" aria-label="Bio" maxlength="322" placeholder="Enter details about yourself"></textarea>
+			</div>
 
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <span class="input-group-text" id="basic-addon1">Full Name</span>
-		  </div>
-		  <input type="text" class="form-control" placeholder="Enter Full Name" aria-label="Username" aria-describedby="Username">
+		  <a routerLink="/dashboard"><button type="submit" class="btn btn-success nav1">Submit</button></a>
 		</div>
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <span class="input-group-text" id="basic-addon1">Email</span>
-		  </div>
-		  <input type="email" class="form-control" placeholder="Enter Email" aria-label="Email" aria-describedby="basic-addon1">
-		</div>
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <span class="input-group-text" id="basic-addon1">Age</span>
-		  </div>
-		  <input type="number" class="form-control" placeholder="Enter Age" aria-label="Age" aria-describedby="basic-addon1">
-		</div>
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <label class="input-group-text" for="genderSelect">Gender</label>
-		  </div>
-		  <select class="custom-select" id="genderSelect">
-		    <option selected>Select...</option>
-		    <option>Male</option>
-		    <option>Female</option>
-		    <option>Other</option>
-		  </select>
-		</div>
-		<div class="input-group mb-3">
-		  <div class="input-group-prepend">
-		    <label class="input-group-text" for="homeInput">Home Country</label>
-		  </div>
-		  <select class="custom-select" id="homeInput">
-		    <option selected>Select...</option>
-		    <option *ngFor="let country of cntries.countries">{{ country }}</option>
-		  </select>
-		</div>
-		<div class="input-group">
-		  <div class="input-group-prepend">
-		    <span class="input-group-text">Bio</span>
-		  </div>
-		  <textarea class="form-control" aria-label="Bio" maxlength="322" placeholder="Enter details about yourself"></textarea>
-		</div>
-
-	  <a routerLink="/dashboard"><button type="submit" class="btn btn-success nav1">Submit</button></a>
 	</form>
 </div>
 

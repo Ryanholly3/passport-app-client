@@ -24,7 +24,7 @@ hr {
 	padding: 0.5%;
 	border: solid 1px #4F5257;
 	border-radius: 5px;
-	background-color: rgba(49,51,55,0.9);
+	background-color: rgba(49,51,55,0.75);
 }
 
 .bg-video {
@@ -45,7 +45,7 @@ hr {
 }
 
 .bg-dark {
-	background-color: rgb(48,52,57, 0.9) !important;
+	background-color: rgb(48,52,57, 0.75) !important;
 }
 
 button.nav1.lgin {
@@ -69,4 +69,9 @@ button.nav1 {
 	color: rgba(0,195,255,1) !important;
 	border-bottom: 1px solid rgba(255,255,255,1);
 	margin-bottom: -4px;
+}
+
+.col-lg-7 {
+	margin-right: auto;
+	margin-left: auto;
 }

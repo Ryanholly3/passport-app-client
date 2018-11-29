@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
   latitude= 51.678418;
   longitude= 7.809007;
 
+
   user= {};
   visits= [];
   destinations= [];

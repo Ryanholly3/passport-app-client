@@ -3,11 +3,12 @@
 		<div class="col-lg-8">
 			<div class="card text-white bg-dark mb-3 cntr">
 
-				<agm-map [latitude]="latitude" [longitude]="longitude">
+				<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=1>
 				  <agm-marker
 						*ngFor="let marker of destinations"
 						 [latitude]="marker.latitude"
 						 [longitude]="marker.longitude"
+						 [iconUrl]="{ url: '../assets/map-icons/red-icon.png', scaledSize: {width: 40, height: 40} }"
 						 ></agm-marker>
 				</agm-map>
 

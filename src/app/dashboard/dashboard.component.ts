@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   latitude= 51.678418;
   longitude= 7.809007;
 
-  user= {};
+  user= [];
   userId;
   visits= [];
   destinations= [];
@@ -30,9 +30,9 @@ export class DashboardComponent implements OnInit {
 
   getUser(){
     this.user = this.usersService.getUser()
-    this.userId = this.user.user[0].id;
-    this.visits = this.user.user[0].visited;
-    this.destinations = this.user.user[0].destinations;
+    this.userId = this.user[0].id;
+    this.visits = this.user[0].visited;
+    this.destinations = this.user[0].destinations;
   }
 
   getUsersDestinations(){

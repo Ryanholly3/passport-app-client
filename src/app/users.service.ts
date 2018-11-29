@@ -8,8 +8,8 @@ import { USERDATA } from './usersData';
 
 
 export class UsersService {
-  user = {}
-  users = {}
+  user = []
+  users = []
   usersDestinations = []
 
   constructor() { }
@@ -18,7 +18,7 @@ export class UsersService {
      fetch(`http://localhost:3100/passport_users/${selectedUser}`)
       .then(response => response.json())
       .then(json => {
-        this.user = json
+        this.user = json.user
       })
   }
 
@@ -26,12 +26,12 @@ export class UsersService {
     fetch(`http://localhost:3100/passport_users`)
      .then(response => response.json())
      .then(json => {
-       this.users = json
+       this.users = json.users
      })
   }
 
   removeUser(){
-    this.user = {}
+    this.user = []
   }
 
   getUser(){

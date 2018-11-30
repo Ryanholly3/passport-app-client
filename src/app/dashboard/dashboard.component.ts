@@ -45,5 +45,6 @@ export class DashboardComponent implements OnInit {
       return dest.passport_users_id !== this.userId
     })
     this.filteredDestinations = filtered
+    console.log(this.filteredDestinations)
   }
 }

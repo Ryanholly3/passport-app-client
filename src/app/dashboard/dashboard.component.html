@@ -4,7 +4,7 @@
 			<div class="card text-white bg-dark mb-3 cntr">
 
 				<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=1>
-				  <agm-marker
+					<agm-marker
 						*ngFor="let marker of destinations"
 						 [latitude]="marker.latitude"
 						 [longitude]="marker.longitude"
@@ -21,9 +21,20 @@
 						 [latitude]="marker3.latitude"
 						 [longitude]="marker3.longitude"
 						 [iconUrl]="{ url: '../assets/map-icons/blue-icon.png', scaledSize: {width: 40, height: 40} }"
-					></agm-marker>
+					>
+						<agm-snazzy-info-window
+							[maxWidth]='15'
+							[closeWhenOthersOpen]=true
+							[backgroundColor]='white'
+							[fontColor]="'black'">
+							<ng-template>
+								User: {{ marker3.name }}
+								<br>
+								email: {{ marker3.email }}
+							</ng-template>
+						</agm-snazzy-info-window>
+					</agm-marker>
 				</agm-map>
-
 			</div>
 
 		</div>

@@ -9,13 +9,33 @@
 						 [latitude]="marker.latitude"
 						 [longitude]="marker.longitude"
 						 [iconUrl]="{ url: '../assets/map-icons/red-icon.png', scaledSize: {width: 40, height: 40} }"
-					></agm-marker>
+					>
+						<agm-snazzy-info-window
+							[maxWidth]="'auto'"
+							[closeWhenOthersOpen]=true
+							[backgroundColor]='white'
+							[fontColor]="'black'">
+							<ng-template>
+								I want to go here!
+							</ng-template>
+						</agm-snazzy-info-window>
+					</agm-marker>
 					<agm-marker
 						*ngFor="let marker2 of visits"
 						 [latitude]="marker2.latitude"
 						 [longitude]="marker2.longitude"
 						 [iconUrl]="{ url: '../assets/map-icons/green-icon.png', scaledSize: {width: 40, height: 40} }"
-					></agm-marker>
+					>
+						<agm-snazzy-info-window
+							[maxWidth]="'auto'"
+							[closeWhenOthersOpen]=true
+							[backgroundColor]='white'
+							[fontColor]="'black'">
+							<ng-template>
+								I've been here!
+							</ng-template>
+						</agm-snazzy-info-window>
+					</agm-marker>
 					<agm-marker
 						*ngFor="let marker3 of filteredDestinations"
 						 [latitude]="marker3.latitude"
@@ -23,12 +43,12 @@
 						 [iconUrl]="{ url: '../assets/map-icons/blue-icon.png', scaledSize: {width: 40, height: 40} }"
 					>
 						<agm-snazzy-info-window
-							[maxWidth]='15'
+							[maxWidth]="'auto'"
 							[closeWhenOthersOpen]=true
 							[backgroundColor]='white'
 							[fontColor]="'black'">
 							<ng-template>
-								User: {{ marker3.name }}
+								{{ marker3.name }} wants to go here!
 								<br>
 								email: {{ marker3.email }}
 							</ng-template>

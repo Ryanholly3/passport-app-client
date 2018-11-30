@@ -2,6 +2,29 @@
 	border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
+.card-body-custom{
+	display: flex;
+	justify-content: column;
+	align-items: center;
+}
+
+.card-body{
+	padding: .5rem;
+
+}
+
+.cntr2 {
+	margin-top: 5%;
+	padding: 0.5%;
+	border: solid 1px #4F5257;
+	border-radius: 5px;
+	background-color: rgba(49,51,55,0.75);
+}
+
 h4 {
 	font-weight: 900 !important;
+}
+
+.card-title {
+	color: rgba(0,195,255,1);
 }

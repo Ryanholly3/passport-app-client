@@ -14,7 +14,7 @@ p {
 
 hr {
 	background-color: rgba(255,255,255,0.2);
-	width: 300px;
+	width: 150px;
 }
 
 .cntr {
@@ -24,6 +24,7 @@ hr {
 	border-radius: 5px;
 	background-color: rgba(49,51,55,0.75);
 }
+
 
 .bg-video {
     position: absolute;

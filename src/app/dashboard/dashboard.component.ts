@@ -9,7 +9,7 @@ import { UsersService } from '../users.service'
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  latitude= 51.678418;
+  latitude= 21.678418;
   longitude= 7.809007;
 
   user= [];

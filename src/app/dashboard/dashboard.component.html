@@ -1,9 +1,21 @@
-<div class="container">
 	<div class="row">
-		<div class="col-lg-8">
-			<div class="card text-white bg-dark mb-3 cntr">
+		<div class="col-sm-10">
+			<div class="card text-white bg-dark mb-3 cntr map">
+				<div>
+				<button class="btn btn-info mpbtn">Terrain</button>
+				<button class="btn btn-warning mpbtn">Satellite</button>
+				<button class="btn btn-success mpbtn">Road Map</button>
+				<button class="btn btn-primary mpbtn">Add Pin</button>
+				<button class="btn btn-danger mpbtn">Delete Pin</button>
+				<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1">Location</span>
+			  </div>
+			  <input type="text" class="form-control" placeholder="Enter Location" aria-label="Location Search" aria-describedby="basic-addon1">
+			</div>
+			</div>
 
-				<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=1>
+				<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=2 style="width:100%;height:690px">
 				  <agm-marker
 						*ngFor="let marker of destinations"
 						 [latitude]="marker.latitude"
@@ -27,8 +39,8 @@
 			</div>
 
 		</div>
-		<div class="col-lg-4">
-			<div class="card text-white bg-dark mb-3 cntr" style="max-width: 100vw; margin-top: 43px">
+		<div class="col-sm-2">
+			<div class="card text-white bg-dark mb-3 list" style="max-width: 20vw; margin-top: 46px">
 				<h3>Places I've Been</h3>
 				<ul>
 					<li
@@ -44,4 +56,3 @@
 			</div>
 		</div>
 	</div>
-</div>

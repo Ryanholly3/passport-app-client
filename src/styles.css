@@ -18,9 +18,7 @@ hr {
 }
 
 .cntr {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 6%;
+	margin-top: 5%;
 	padding: 0.5%;
 	border: solid 1px #4F5257;
 	border-radius: 5px;
@@ -74,4 +72,14 @@ button.nav1 {
 .col-lg-7 {
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.mpbtn {
+	width: 5.5vw;
+	height: 4vh;
+	margin-right: 1%;
+}
+
+.input-group {
+	margin-top: 1%;
 }

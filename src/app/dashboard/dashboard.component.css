@@ -3,7 +3,12 @@ button.nav2 {
 	min-width: 8vw;
 }
 
-agm-map {
-  height: 400px;
-	max-width: 90vw;
+
+div.map {
+	height: 800px;
+	width: 900px;
+}
+
+.list {
+	width: 190%;
 }

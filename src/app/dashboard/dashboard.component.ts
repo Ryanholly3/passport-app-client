@@ -11,11 +11,12 @@ import { UsersService } from '../users.service'
 export class DashboardComponent implements OnInit {
   latitude= 21.678418;
   longitude= 7.809007;
+  pinInfoShow = false;
 
   latitudeClicked;
   longitudeClicked;
   locationChosen=false;
-
+ 
   user= [];
   userId;
   visits= [];
@@ -57,4 +58,9 @@ export class DashboardComponent implements OnInit {
     this.longitudeClicked = event.coords.lng;
     this.locationChosen=true;
   }
+
+  pinInputShow() {
+    this.pinInfoShow = true;
+  }
+
 }

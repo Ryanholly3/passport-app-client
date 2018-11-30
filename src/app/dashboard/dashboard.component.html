@@ -5,8 +5,6 @@
 				<button class="btn btn-info mpbtn">Terrain</button>
 				<button class="btn btn-warning mpbtn">Satellite</button>
 				<button class="btn btn-success mpbtn">Road Map</button>
-				<button class="btn btn-primary mpbtn">Add Pin</button>
-				<button class="btn btn-danger mpbtn">Delete Pin</button>
 				<div class="input-group mb-3">
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="basic-addon1">Location</span>
@@ -21,7 +19,26 @@
 						[longitude]="longitudeClicked"
 						[iconUrl]="{ url: '../assets/map-icons/hotpink-icon.png', scaledSize: {width: 40, height: 40} }"
 						*ngIf="locationChosen"
-					></agm-marker>
+					>
+						<agm-snazzy-info-window
+							[maxWidth]="'auto'"
+							[closeWhenOthersOpen]=true
+							[backgroundColor]="'rgb(48,52,57, 0.75)'"
+							[fontColor]="'white'"
+							>
+								<ng-template>
+									<p>New Destination</p>
+									<div class="input-group">
+									  <div class="input-group-prepend">
+									  </div>
+									  <textarea class="form-control" aria-label="Trip" maxlength="322" placeholder="Enter details about your future trip"></textarea>
+									</div>
+									<span class="badge badge-primary">Save</span>
+
+								</ng-template>
+						</agm-snazzy-info-window>
+
+					</agm-marker>
 					<agm-marker
 						*ngFor="let marker of destinations"
 						 [latitude]="marker.latitude"
@@ -31,11 +48,14 @@
 						<agm-snazzy-info-window
 							[maxWidth]="'auto'"
 							[closeWhenOthersOpen]=true
-							[backgroundColor]='white'
-							[fontColor]="'black'">
-							<ng-template>
-								I want to go here!
-							</ng-template>
+							[backgroundColor]="'rgb(48,52,57, 0.75)'"
+							[fontColor]="'white'"
+							>
+								<ng-template>
+									I want to go here!
+									<br>
+									<span class="badge badge-danger">Delete Pin</span>
+								</ng-template>
 						</agm-snazzy-info-window>
 					</agm-marker>
 					<agm-marker
@@ -47,11 +67,11 @@
 						<agm-snazzy-info-window
 							[maxWidth]="'auto'"
 							[closeWhenOthersOpen]=true
-							[backgroundColor]='white'
-							[fontColor]="'black'">
-							<ng-template>
-								I've been here!
-							</ng-template>
+							[backgroundColor]="'rgb(48,52,57, 0.75)'"
+							[fontColor]="'white'">
+								<ng-template>
+									I've been here!
+								</ng-template>
 						</agm-snazzy-info-window>
 					</agm-marker>
 					<agm-marker
@@ -63,13 +83,14 @@
 						<agm-snazzy-info-window
 							[maxWidth]="'auto'"
 							[closeWhenOthersOpen]=true
-							[backgroundColor]='white'
-							[fontColor]="'black'">
-							<ng-template>
-								{{ marker3.name }} wants to go here!
-								<br>
-								email: {{ marker3.email }}
-							</ng-template>
+							[backgroundColor]="'rgb(48,52,57, 0.75)'"
+							[fontColor]="'white'"
+							>
+								<ng-template>
+									{{ marker3.name }} wants to go here!
+									<br>
+									email: {{ marker3.email }}
+								</ng-template>
 						</agm-snazzy-info-window>
 					</agm-marker>
 				</agm-map>
@@ -78,16 +99,22 @@
 		</div>
 		<div class="col-sm-2">
 			<div class="card text-white bg-dark mb-3 list" style="max-width: 20vw; margin-top: 46px">
-				<h3>Places I've Been</h3>
+				<h4><span><img class="pin-key" src="../assets/map-icons/green-icon.png"></span>  Places I've Been</h4>
 				<ul>
 					<li
 						*ngFor="let visit of visits"
 					>{{ visit.name }}</li>
 				</ul>
-				<h3>Places I want to go!</h3>
+				<h4><span><img class="pin-key" src="../assets/map-icons/red-icon.png"></span>  Places I Want To go</h4>
 				<ul>
 					<li
 						*ngFor="let destination of destinations"
+					>{{ destination.name }}</li>
+				</ul>
+				<h4><span><img class="pin-key" src="../assets/map-icons/blue-icon.png"></span>  Places Others Want To Go!</h4>
+				<ul>
+					<li
+						*ngFor="let destination of filteredDestinations"
 					>{{ destination.name }}</li>
 				</ul>
 			</div>

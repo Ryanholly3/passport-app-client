@@ -12,3 +12,16 @@ div.map {
 .list {
 	width: 190%;
 }
+
+ul {
+ list-style: none;
+}
+
+.pin-key {
+	width: 25px; 
+	height: 25px;
+}
+
+.badge-primary {
+	background-color: magenta !important;
+}

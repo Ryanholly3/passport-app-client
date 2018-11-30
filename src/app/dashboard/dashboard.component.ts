@@ -12,6 +12,10 @@ export class DashboardComponent implements OnInit {
   latitude= 21.678418;
   longitude= 7.809007;
 
+  latitudeClicked;
+  longitudeClicked;
+  locationChosen=false;
+
   user= [];
   userId;
   visits= [];
@@ -45,5 +49,12 @@ export class DashboardComponent implements OnInit {
       return dest.passport_users_id !== this.userId
     })
     this.filteredDestinations = filtered
+    console.log(this.filteredDestinations)
+  }
+
+  chooseLocation(event){
+    this.latitudeClicked = event.coords.lat;
+    this.longitudeClicked = event.coords.lng;
+    this.locationChosen=true;
   }
 }

@@ -3,7 +3,13 @@
 		<div class="col-lg-8">
 			<div class="card text-white bg-dark mb-3 cntr">
 
-				<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=1>
+				<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=1 (mapClick)="chooseLocation($event)">
+					<agm-marker
+						[latitude]="latitudeClicked"
+						[longitude]="longitudeClicked"
+						[iconUrl]="{ url: '../assets/map-icons/hotpink-icon.png', scaledSize: {width: 40, height: 40} }"
+						*ngIf="locationChosen"
+					></agm-marker>
 					<agm-marker
 						*ngFor="let marker of destinations"
 						 [latitude]="marker.latitude"

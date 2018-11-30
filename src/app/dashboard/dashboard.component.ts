@@ -16,6 +16,8 @@ export class DashboardComponent implements OnInit {
   latitudeClicked;
   longitudeClicked;
   locationChosen=false;
+
+  mapType='terrain'
  
   user= [];
   userId;
@@ -63,4 +65,21 @@ export class DashboardComponent implements OnInit {
     this.pinInfoShow = true;
   }
 
+  changeMapTerrain() {
+    this.mapType = "terrain"
+  }
+
+  changeMapSatellite() {
+    this.mapType = "satellite"
+  }
+
+  changeMapRoadMap() {
+    this.mapType = "roadmap"
+  }
+
+  changeMapHybrid() {
+    this.mapType = "hybrid"
+  }
+
 }
+

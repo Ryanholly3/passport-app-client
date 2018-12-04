@@ -16,30 +16,27 @@ export class LoginSignupComponent implements OnInit {
   constructor(private usersService: UsersService, private comp: AppComponent) { }
 
   ngOnInit() {
-    this.getAllUsers()
-    this.getUsersDestinations()
+    this.initiateFetches()
   }
 
-  getAllUsers() {
-    this.usersService.fetchAllUsers()
+  initiateFetches(){
+    this.usersService.checkBackendConnection()
   }
 
-  getUsersDestinations() {
-    this.usersService.fetchDestinations()
-  }
 
   //set to scroll down menu instead of submit!!
   setUser(event){
     this.selectedUser = event.target.value;
     this.usersService.fetchUser(this.selectedUser)
+    this.usersService.filterDestinations(this.selectedUser)
   }
 
   public navEnabled(): void {
-    this.comp.navEnabled(); 
+    this.comp.navEnabled();
   }
 
   public navDisabled(): void {
-    this.comp.navDisabled(); 
+    this.comp.navDisabled();
   }
 
 }

@@ -1,27 +1,56 @@
-button.nav2 {
-	margin: 1% 0.5% 1% auto;
-	min-width: 8vw;
+
+.map-card {
+	height: 80%;
+	width: 100%;
+	padding: 10px;
 }
 
-
-div.map {
-	height: 765px;
-	width: 900px;
+.map-header{
+	height: 18%;
+	width: 100%;
 }
 
-.list {
-	width: 190%;
+.map-container{
+	height: 82%;
+	width: 100%
 }
+
+agm-map{
+	height: 100%;
+	width: 100%;
+}
+
+.map-list{
+	height: 80%;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 
 ul {
  list-style: none;
+ padding: 0;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	height: 95vh;
 }
 
 .pin-key {
-	width: 25px; 
+	width: 25px;
 	height: 25px;
 }
 
 .badge-primary {
 	background-color: magenta !important;
+}
+
+
+.input-group {
+	margin-top: 1%;
 }

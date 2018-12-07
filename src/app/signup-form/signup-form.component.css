@@ -1,6 +1,3 @@
-button.nav {
-	margin-top: 25%;
-}
 
 p {
 	color: #FFF;
@@ -8,13 +5,46 @@ p {
 
 h4 {
 	color: #C9D0DF;
-	margin-top: 4%;
+	margin: 0;
 }
 
-.lgin {
-	margin-right: 0.1%;
+.flex-top{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
-.sub {
+.spacer{
+	height:50px;
+	width: 100%;
+}
+
+.signup {
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
+	border: solid 1px #4F5257;
+	border-radius: 5px;
+	background-color: rgba(49,51,55,0.75);
+}
+
+.signup-buttons{
+	width: 160px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.signup-form{
+	width: 100%;
+	display: flex;
+	flex-direction: column
+}
+
+
+.nav1{
 	margin-top: 3.5%;
 }

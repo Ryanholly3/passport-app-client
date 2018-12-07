@@ -9,6 +9,9 @@ Travel app that allows users to plan trips with friends.
 
 Upon logging in to the app, users view their dashboard - a google map that has their saved travel destinations pinned. Users can also view the locations that other users have pinned, allowing them to coordinate travel plans.
 
+## ScreenShot 
+![](ScreenShot.jpg)
+
 ## Technologies Used
 * Angular.js v.7
 * JavaScript

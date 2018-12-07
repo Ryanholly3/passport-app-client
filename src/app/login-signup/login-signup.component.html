@@ -1,43 +1,56 @@
-<div class="col-lg-7 cntr">
-	<a routerLink=""><button type="button" class="btn btn-info nav1 lgin">Log In</button></a>
-	<a routerLink="/signup-form"><button type="button" class="btn btn-info nav1">Sign Up</button></a>
-	<hr>
-	<h4>Log In</h4>
-	<hr>
-	<div class="col-lg-7">
-		<form>
-			<div class="input-group mb-3">
-			  <div class="input-group-prepend">
-			    <label class="input-group-text" for="userSelect">User</label>
-			  </div>
-			  <select class="custom-select" (change)="setUser($event)" id="homeInput">
-			    <option selected>Select...</option>
-			    <option value="1">Ryan</option>
-				  <option value="2">Chris</option>
-				  <option value="3">Tyler</option>
-					<option value="4">Son</option>
-			  </select>
-			</div>
-		  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1">Email</span>
-			  </div>
-			  <input type="text" class="form-control" placeholder="Enter Email Address" aria-label="Email" aria-describedby="Email">
-			</div>
-		  <div class="input-group mb-3">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1">Password</span>
-			  </div>
-			  <input type="password" class="form-control" placeholder="Enter Password" aria-label="Password" aria-describedby="Password">
-			</div>
-		  <a routerLink="/dashboard">
-				<button
-					type="submit"
-					class="btn btn-success nav1"
-					(click)="navEnabled()"
-				>Submit</button>
-			</a>
-		</form>
+<div class="row">
+	<div class="col-sm-3">
 	</div>
+	<div class="col-sm-6 flex-top">
+		<div class="spacer">
+		</div>
+		<div class="login">
+			<div class="login-buttons">
+				<a routerLink=""><button type="button" class="btn btn-info nav1 lgin">Log In</button></a>
+				<a routerLink="/signup-form"><button type="button" class="btn btn-info nav1">Sign Up</button></a>
+			</div>
+			<hr>
+			<h4>Log In</h4>
+			<hr>
+			<div class="login-form">
+				<form>
+					<div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <label class="input-group-text" for="userSelect">User</label>
+					  </div>
+					  <select class="custom-select" (change)="setUser($event)" id="homeInput">
+					    <option selected>Select...</option>
+					    <option value="1">Ryan</option>
+						  <option value="2">Chris</option>
+						  <option value="3">Tyler</option>
+							<option value="4">Son</option>
+					  </select>
+					</div>
 
+				  <div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1">Email</span>
+					  </div>
+					  <input type="text" class="form-control" placeholder="Enter Email Address" aria-label="Email" aria-describedby="Email">
+					</div>
+
+				  <div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1">Password</span>
+					  </div>
+					  <input type="password" class="form-control" placeholder="Enter Password" aria-label="Password" aria-describedby="Password">
+					</div>
+
+				  <a routerLink="/dashboard">
+						<button
+							type="submit"
+							class="btn btn-success nav1"
+							(click)="navEnabled()">Submit</button>
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+	</div>
 </div>

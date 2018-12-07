@@ -4,9 +4,44 @@ p {
 
 h4 {
 	color: #C9D0DF;
-	margin-top: 4%;
+	margin: 0;
 }
 
-.lgin {
-	margin-right: 2%;
+.flex-top{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.spacer{
+	height: 50px;
+	width: 100%
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
+	border: solid 1px #4F5257;
+	border-radius: 5px;
+	background-color: rgba(49,51,55,0.75);
+}
+
+.login-buttons{
+	width: 160px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.login-form{
+	width: 100%;
+	display: flex;
+	flex-direction: column
+}
+
+.nav1{
+	margin-top: 3.5%;
 }

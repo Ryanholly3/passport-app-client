@@ -1,27 +1,28 @@
-# PassportAppClient
+# Galvanize Reads
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+[Open Surge Deployed Project](http://my-passport-app.surge.sh/)
 
-## Development server
+View repository for project back-end [HERE](https://github.com/Ryanholly3/passport-app-api).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+Travel app that allows users to plan trips with friends.
 
-## Code scaffolding
+Upon logging in to the app, users view their dashboard - a google map that has their saved travel destinations pinned. Users can also view the locations that other users have pinned, allowing them to coordinate travel plans.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+* Angular.js v.7
+* JavaScript
+* HTML
+* CSS
+* Bootstrap
+* Google Maps API
+* Node.js
+* postgreSQL
+* Express.js
+* Knex.js
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Authors
+* [Tyler Adams](https://github.com/tadams9145)
+* [Chris Edgar](https://github.com/verzetem)
+* [Ryan Holly](https://github.com/Ryanholly3)
+* [Son Phan](https://github.com/svphan1)

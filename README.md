@@ -4,6 +4,25 @@
 
 View repository for project back-end [HERE](https://github.com/Ryanholly3/passport-app-api).
 
+## Required Installation(s)
+
+Angular CLI
+```sh
+npm install -g @angular/cli
+```
+View the Angular CLI documentation [here](https://cli.angular.io/)
+
+## Getting Started
+
+On command line:
+
+```sh
+git clone git@github.com:Ryanholly3/passport-app-client.git
+cd passport-app-client
+npm install
+ng serve --open
+```
+
 ## Description
 Travel app that allows users to plan trips with friends.
 

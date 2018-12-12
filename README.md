@@ -1,4 +1,4 @@
-# Galvanize Reads
+# My Passport
 
 [Open Surge Deployed Project](http://my-passport-app.surge.sh/)
 

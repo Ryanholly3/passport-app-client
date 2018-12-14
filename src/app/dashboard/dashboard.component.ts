@@ -19,18 +19,20 @@ export class DashboardComponent implements OnInit {
 
   mapType='terrain'
 
-
  //selected user
   user= [];
   visits= [];
   destinations= [];
 
-
   //others Destinations
   filteredDestinations=[];
 
+  // New destination
+  cityCountry = '';
+  tripDetails = '';
 
-  constructor(private usersService: UsersService) { }
+
+  constructor(private usersService: UsersService,) {}
 
   ngOnInit() {
     this.getUser()
@@ -85,4 +87,39 @@ export class DashboardComponent implements OnInit {
       return this.destinations
     })
   }
+
+  inputDest(event){
+    this.cityCountry = event.target.value
+    //SAVE TO VARIABLE ABOVE
+  }
+
+  inputDestDetails(event){
+    this.tripDetails = event.target.value
+    //SAVE TO VARIABLE ABOVE
+  }
+  submitNewDest(){
+    let newDest = {
+      name: this.cityCountry,
+      latitude: this.latitudeClicked,
+      longitude: this.longitudeClicked,
+      country_code: "?",
+      trip_detail: this.tripDetails,
+      passport_users_id: this.user[0].id
+    }
+
+
+    this.usersService.addDestination(newDest, this.user[0].id)
+      .then(()=>{
+        this.user = this.usersService.getUser()
+        return this.user
+      })
+      .then(()=>{
+        this.visits = this.user[0].visited;
+        this.destinations = this.user[0].destinations;
+        this.locationChosen = false;
+        this.pinInfoShow = false;
+        return this.destinations
+      })
+  }
+
 }

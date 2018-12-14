@@ -122,4 +122,32 @@ export class UsersService {
     }
   }
 
+  addDestination(newDest, selectedUser){
+    if(this.backEnd === 'localhost'){
+      return fetch(`http://localhost:3100/destinations`, {
+        method: 'POST',
+        body: JSON.stringify(newDest),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        }
+      })
+      .then(()=>{
+        return this.fetchUser(selectedUser)
+      })
+    } else if (this.backEnd === 'deployedBackend'){
+      return fetch(`https://evening-refuge-33727.herokuapp.com/destinations`,{
+        method: 'POST',
+        body: JSON.stringify(newDest),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        }
+      })
+      .then(()=>{
+        return this.fetchUser(selectedUser)
+      })
+    }
+  }
+
 }

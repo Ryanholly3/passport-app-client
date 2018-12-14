@@ -20,6 +20,7 @@ export class UsersService {
   checkBackendConnection() {
     fetch(`http://localhost:3100/`)
      .then(response => {
+        console.log('LOCAL HOST')
          this.backEnd = 'localhost'
          this.fetchAllUsers()
          this.fetchDestinations()
@@ -33,16 +34,18 @@ export class UsersService {
 
   fetchUser(selectedUser) {
     if(this.backEnd === "localhost"){
-      fetch(`http://localhost:3100/passport_users/${selectedUser}`)
+      return fetch(`http://localhost:3100/passport_users/${selectedUser}`)
        .then(response => response.json())
        .then(json => {
          this.user = json.user
+         return this.user
        })
     } if (this.backEnd === "deployedBackend"){
-      fetch(`https://evening-refuge-33727.herokuapp.com/passport_users/${selectedUser}`)
+      return fetch(`https://evening-refuge-33727.herokuapp.com/passport_users/${selectedUser}`)
        .then(response => response.json())
        .then(json => {
          this.user = json.user
+         return this.user
        })
     }
   }
@@ -101,6 +104,22 @@ export class UsersService {
 
   getFilteredDestinations(){
     return this.filteredDestinations
+  }
+
+  deleteDestination(destId, selectedUser){
+    if(this.backEnd === 'localhost'){
+      return fetch(`http://localhost:3100/destinations/${destId}`, {
+        method: 'DELETE',
+      }).then(()=>{
+        return this.fetchUser(selectedUser)
+      })
+    } else if (this.backEnd === 'deployedBackend'){
+      return fetch(`https://evening-refuge-33727.herokuapp.com/destinations/${destId}`,{
+        method: 'DELETE',
+      }).then(()=>{
+        return this.fetchUser(selectedUser)
+      })
+    }
   }
 
 }

@@ -73,4 +73,16 @@ export class DashboardComponent implements OnInit {
     this.mapType = "hybrid"
   }
 
+  deleteDestination(destId){
+    this.usersService.deleteDestination(destId, this.user[0].id)
+    .then(()=>{
+      this.user = this.usersService.getUser()
+      return this.user
+    })
+    .then(()=>{
+      this.visits = this.user[0].visited;
+      this.destinations = this.user[0].destinations;
+      return this.destinations
+    })
+  }
 }

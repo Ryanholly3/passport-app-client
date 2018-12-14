@@ -63,7 +63,7 @@
 									<ng-template>
 										I want to go here!
 										<br>
-										<span class="badge badge-danger">Delete Pin</span>
+										<button class="badge badge-danger" (click)="deleteDestination(marker.destination_id)">Delete Pin</button>
 									</ng-template>
 							</agm-snazzy-info-window>
 						</agm-marker>

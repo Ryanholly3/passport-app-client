@@ -36,14 +36,12 @@
 								[fontColor]="'white'"
 								>
 									<ng-template>
-										<p>New Destination</p>
-										<div class="input-group">
-										  <div class="input-group-prepend">
-										  </div>
-										  <textarea class="form-control" aria-label="Trip" maxlength="322" placeholder="Enter details about your future trip"></textarea>
+										<div class="new-destination">
+											<span>New Destination</span>
+											<input type="text" class="new-dest-input" placeholder="City, State" (change)="inputDest($event)">
+											<textarea class="form-control" maxlength="322" placeholder="Trip Details" (change)="inputDestDetails($event)"></textarea>
+											<button class="badge badge-primary" (click)="submitNewDest()">Save</button>
 										</div>
-										<span class="badge badge-primary">Save</span>
-
 									</ng-template>
 							</agm-snazzy-info-window>
 
@@ -63,7 +61,7 @@
 									<ng-template>
 										I want to go here!
 										<br>
-										<span class="badge badge-danger">Delete Pin</span>
+										<button class="badge badge-danger" (click)="deleteDestination(marker.destination_id)">Delete Pin</button>
 									</ng-template>
 							</agm-snazzy-info-window>
 						</agm-marker>
@@ -110,24 +108,26 @@
 
 		<div class="col-sm-3 flex-center">
 			<div class="card text-white bg-dark mb-3 map-list" >
-				<h4><span><img class="pin-key" src="../assets/map-icons/green-icon.png"></span>  Places I've Been</h4>
-				<ul>
-					<li
-						*ngFor="let visit of visits"
-					>{{ visit.name }}</li>
-				</ul>
-				<h4><span><img class="pin-key" src="../assets/map-icons/red-icon.png"></span>  Places I Want To go</h4>
-				<ul>
-					<li
-						*ngFor="let destination of destinations"
-					>{{ destination.name }}</li>
-				</ul>
-				<h4><span><img class="pin-key" src="../assets/map-icons/blue-icon.png"></span>  Places Others Want To Go!</h4>
-				<ul>
-					<li
-						*ngFor="let destination of filteredDestinations"
-					>{{ destination.destination_name }}</li>
-				</ul>
+				<div class="map-list-scroll">
+					<h4><span><img class="pin-key" src="../assets/map-icons/green-icon.png"></span>  Places I've Been</h4>
+					<ul>
+						<li
+							*ngFor="let visit of visits"
+						>{{ visit.name }}</li>
+					</ul>
+					<h4><span><img class="pin-key" src="../assets/map-icons/red-icon.png"></span>  Places I Want To go</h4>
+					<ul>
+						<li
+							*ngFor="let destination of destinations"
+						>{{ destination.name }}</li>
+					</ul>
+					<h4><span><img class="pin-key" src="../assets/map-icons/blue-icon.png"></span>  Places Others Want To Go!</h4>
+					<ul>
+						<li
+							*ngFor="let destination of filteredDestinations"
+						>{{ destination.destination_name }}</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
